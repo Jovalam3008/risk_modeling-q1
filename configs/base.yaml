@@ -1,0 +1,27 @@
+# Paths relativos al directorio raíz del proyecto
+# Dataset Home Credit: ver configs/home_credit.yaml y src.data.home_credit
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  features: data/features
+  artifacts_models: artifacts/models
+  artifacts_metrics: artifacts/metrics
+  artifacts_calibration: artifacts/calibration
+  reports_figures: reports/figures
+
+seed: 42
+
+splits:
+  test_size: 0.2
+  val_size: 0.1
+  stratify: true
+  # time_column: null  # descomentar si el split es temporal
+
+metrics:
+  primary: roc_auc
+  secondary:
+    - pr_auc
+    - brier_score
+    - log_loss

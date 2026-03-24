@@ -1,0 +1,9 @@
+# Política cost-based: umbrales según costes FP / FN
+costs:
+  false_positive: 1.0
+  false_negative: 5.0
+
+# Si no hay matriz de coste explícita, usar quantiles o fijo
+strategy: cost_minimize  # opciones: cost_minimize | fixed | quantile
+fixed_threshold: 0.5
+quantile: 0.5
